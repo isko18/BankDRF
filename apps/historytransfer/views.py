@@ -1,12 +1,10 @@
-#rest
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework.generics import  CreateAPIView
 
-#my imports
 from .serializers import HistoryTransfer,HistoryTransferSerializer
 from apps.historytransfer.models import Username
-# Create your views here.
+
 class CreateTransferView(CreateAPIView):
     serializer_class = HistoryTransferSerializer
     def post(self, request):
